@@ -44,6 +44,12 @@ class Collection {
             print it+" "
         }
 
+        //当然 可以自定义参数  后面加-> 表示自定义替代it
+        numbers.each { params->
+            print params+" "
+        }
+
+
         println ""
         println "every:"
 
@@ -84,5 +90,18 @@ class Collection {
             print it+" "
         }
         assert [1,2,3,4,3].count(3) == 2
+
+
+        //toUpperCase 方法 对string 进行大小写转换  注意*
+        assert ["JAVA", "GROOVY"] ==
+                ["Java", "Groovy"]*.toUpperCase()
+
+        ["Java", "Groovy"]*.toUpperCase().each {
+                    print it+" "
+                }
+
+
+
+
     }
 }
